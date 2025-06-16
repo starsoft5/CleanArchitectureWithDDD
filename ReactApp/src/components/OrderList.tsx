@@ -24,7 +24,7 @@ const OrderList = () => {
 
   useEffect(() => {
     axios
-      .get<Order[]>('http://localhost:5077/api/orders')
+      .get<Order[]>('http://localhost:7112/api/GetAllOrdersFunction')
       .then((response) => setOrders(response.data))
       .catch((error) => console.error('Error fetching orders:', error));
   }, []);

@@ -25,7 +25,8 @@ public class GetAllOrdersQueryHandler : IRequestHandler<GetAllOrdersQuery, List<
         {
             Id = i.Id,
             Product = i.Product,
-            Quantity = i.Quantity
+            Quantity = i.Quantity,
+            Price = i.Price
         }).ToList()
     }).ToListAsync(cancellationToken);
     }

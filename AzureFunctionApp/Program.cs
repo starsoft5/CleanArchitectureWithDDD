@@ -19,7 +19,7 @@ using AzureFunctionApp.Orders;
 var builder = FunctionsApplication.CreateBuilder(args);
 
 // Define CORS policy
-var corsPolicyName = "AllowAll";
+/* var corsPolicyName = "AllowAll";
 builder.Services.AddCors(options =>
 {
     options.AddPolicy(name: corsPolicyName,
@@ -29,7 +29,7 @@ builder.Services.AddCors(options =>
                   .AllowAnyMethod()
                   .AllowAnyHeader();
         });
-});
+}); */
 
 
 // Fix: Provide a configuration action for MediatRServiceConfiguration instead of passing the assembly directly  
