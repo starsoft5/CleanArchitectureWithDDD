@@ -8,16 +8,12 @@ public class DeleteOrderCommandHandler : IRequestHandler<DeleteOrderCommand, boo
 {
     private readonly AppDbContext _context;
 
-    public DeleteOrderCommandHandler(AppDbContext context)
-    {
-        _context = context;
-    }
+    public DeleteOrderCommandHandler(AppDbContext context) => _context = context;
 
     public async Task<bool> Handle(DeleteOrderCommand request, CancellationToken cancellationToken)
     {
-        var order = await _context.Orders.FindAsync(new object[] { request.OrderId }, cancellationToken);
-        if (order == null)
-            return false;
+        var order = await _context.Orders.FindAsync(request.Id);
+        if (order == null) return false;
 
         _context.Orders.Remove(order);
         await _context.SaveChangesAsync(cancellationToken);

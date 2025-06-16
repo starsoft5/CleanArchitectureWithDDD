@@ -1,5 +1,4 @@
 using Application.Queries;
-using AzureFunctionApp;
 using Google.Protobuf.WellKnownTypes;
 using Infrastructure;
 using Infrastructure.Handlers;
@@ -13,6 +12,7 @@ using Microsoft.Extensions.Hosting;
 using OpenTelemetry.Trace;
 using OpenTelemetry.Resources;
 using OpenTelemetry.Instrumentation;
+using AzureFunctionApp.Orders;
 
 
 
@@ -33,7 +33,7 @@ builder.Services.AddCors(options =>
 
 
 // Fix: Provide a configuration action for MediatRServiceConfiguration instead of passing the assembly directly  
-builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(Function1).Assembly));
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(GetAllOrdersFunction).Assembly));
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(GetAllOrdersQueryHandler).Assembly));
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(GetAllOrdersQuery).Assembly));
 

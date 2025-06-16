@@ -1,9 +1,8 @@
-﻿using Domain.Entities;
+﻿using Application.DTOs;
+using Domain.Entities;
 using MediatR;
 using System.Collections.Generic;
 
 namespace Application.Queries;
 
-public class GetAllOrdersQuery : IRequest<List<Order>>
-{
-}
+public class GetAllOrdersQuery : IRequest<List<OrderReadDto>> { }

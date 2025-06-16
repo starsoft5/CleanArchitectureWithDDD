@@ -1,6 +1,15 @@
 ﻿using Domain.Entities;
 using MediatR;
+using Application.DTOs;
 
 namespace Application.Commands;
 
-public record CreateOrderCommand(Order Order) : IRequest<Order>; // <--- Must return Order
+public class CreateOrderCommand : IRequest<OrderReadDto>
+{
+    public OrderCreateDto Dto { get; }
+    public CreateOrderCommand(OrderCreateDto dto) => Dto = dto;
+
+    public CreateOrderCommand()
+    {
+    }
+}

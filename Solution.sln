@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastru
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{29BC3923-DE81-4B89-999C-4EC8B0F991A1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureFunctionApp", "AzureFunctionApp\AzureFunctionApp.csproj", "{EC54E1FE-471C-4B2C-B2B1-67391D0BF80E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{29BC3923-DE81-4B89-999C-4EC8B0F991A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29BC3923-DE81-4B89-999C-4EC8B0F991A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29BC3923-DE81-4B89-999C-4EC8B0F991A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC54E1FE-471C-4B2C-B2B1-67391D0BF80E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC54E1FE-471C-4B2C-B2B1-67391D0BF80E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC54E1FE-471C-4B2C-B2B1-67391D0BF80E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC54E1FE-471C-4B2C-B2B1-67391D0BF80E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

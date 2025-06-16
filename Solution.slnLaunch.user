@@ -1,0 +1,11 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "OrderFunctionApp\\OrderFunctionApp.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

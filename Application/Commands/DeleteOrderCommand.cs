@@ -2,4 +2,8 @@
 
 namespace Application.Commands;
 
-public record DeleteOrderCommand(int OrderId) : IRequest<bool>;
+public class DeleteOrderCommand : IRequest<bool>
+{
+    public int Id { get; }
+    public DeleteOrderCommand(int id) => Id = id;
+}
