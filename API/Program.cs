@@ -13,6 +13,19 @@ using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Define CORS policy
+var corsPolicyName = "AllowAll";
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: corsPolicyName,
+        policy =>
+        {
+            policy.AllowAnyOrigin()
+                  .AllowAnyMethod()
+                  .AllowAnyHeader();
+        });
+});
+
 // Add services  
 builder.Services.AddMediatR(cfg =>
     cfg.RegisterServicesFromAssemblies(
@@ -48,6 +61,7 @@ var app = builder.Build();
 
 app.UseSwagger();
 app.UseSwaggerUI();
+app.UseCors(corsPolicyName);
 app.UseAuthorization();
 app.MapControllers();
 app.Run();
